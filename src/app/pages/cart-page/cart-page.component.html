@@ -1,0 +1,8 @@
+<!-- <app-cart-pizza (totalMoneyChange) ="updateTotalMoney($event)"></app-cart-pizza> -->
+
+<div>
+    <app-cart-pizza *ngFor = 'let pizzaCart of cartList' [pizzaCart] = "pizzaCart" (moneyChange) = "updateTotalMoney($event)"></app-cart-pizza>
+</div>
+
+<h1>Total: {{total}}</h1>
+<button (click) = 'submitOrder()'>Buy</button>

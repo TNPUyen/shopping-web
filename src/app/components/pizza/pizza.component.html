@@ -1,0 +1,8 @@
+<div class="card">
+  <img [src]="pizza.imageUrl" alt="pizza" style="width:100%">
+  <div class="container">
+    <h4><b>{{pizza.name}}</b></h4>
+    <p>Giá: {{pizza.unitPrice *1000}} VND</p>
+    <button class="add-button" (click) = "clickToAdd(pizza)">Buy this pizza</button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card">
+  <img [src]="pizzaCart.pizza.imageUrl" alt="pizza">
+  <div class="container">
+    <h4><b>{{pizzaCart.pizza.name}}</b></h4>
+    <div class="change-quantity">
+      <button (click) = "removeQuantityPizza(pizzaCart.pizza)">-</button>
+      <p>{{pizzaCart.quantity}}</p>
+      <button (click) = "addMorePizza(pizzaCart)">+</button>
+    </div>
+    <p>Grand: {{pizzaCart.pizza.unitPrice *1000}} VND x {{pizzaCart.quantity}} = {{pizzaCart.getTotalPrice()}} VND</p>
+  </div>
+  <div>
+    <button (click) = "removePizza(pizzaCart.pizza)">X</button>
+  </div>
+</div>
